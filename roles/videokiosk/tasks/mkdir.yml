@@ -1,0 +1,8 @@
+---
+    - name: Creating Directories
+      file:
+        path: "{{ item }}"
+        state: directory
+      loop:
+        - /home/pi/video
+        - /home/pi/azure

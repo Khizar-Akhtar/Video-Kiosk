@@ -1,0 +1,12 @@
+---
+- name: updating countdown time
+  ansible.builtin.replace:
+    path: /boot/video_looper.ini
+    regexp: 'countdown_time = 5'
+    replace: 'countdown_time = 0'
+
+- name: updating playing directory
+  ansible.builtin.replace:
+    path: /boot/video_looper.ini
+    regexp: 'file_reader = usb_drive'
+    replace: 'file_reader = directory'

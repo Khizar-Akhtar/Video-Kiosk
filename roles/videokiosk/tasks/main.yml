@@ -1,0 +1,19 @@
+---
+   - name: Updating apt
+     include_tasks: apt.yml
+   - name: Installing CronJob
+     include_tasks: cronjob.yml
+   - name: Setting Up rc.local 
+     include_tasks: rc.yml
+   - name: Making Directories
+     include_tasks: mkdir.yml
+   - name: Setting Up azure drive     
+     include_tasks: azuremount.yml
+   - name: Setting Up Script 
+     include_tasks: script.yml
+   - name: Gitclone 
+     include_tasks: gitclone.yml
+   - name: Editing VideConfig  
+     include_tasks: videoconfig.yml
+
+    

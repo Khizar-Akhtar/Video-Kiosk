@@ -1,0 +1,13 @@
+---
+  - name: Cloning git repository and Installing software
+    git:
+      repo: https://github.com/adafruit/pi_video_looper.git
+      dest: /home/pi/pi_video_looper
+
+      clone: yes
+      update: yes
+
+  - name: Installing video software
+    shell: |
+         sudo sh /home/pi/pi_video_looper/install.sh
+

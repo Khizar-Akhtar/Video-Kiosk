@@ -1,0 +1,14 @@
+---
+- name: Enabling rc.local file to auto mount on boot 
+  ansible.builtin.lineinfile:
+    path: /etc/rc.local
+    insertafter: 'nothing'
+    line: sleep 25 
+
+- name: Enabling rc.local file to auto mount on boot 
+  ansible.builtin.lineinfile:
+    path: /etc/rc.local
+    insertafter: '25'
+    line: sudo mount -a
+
+  

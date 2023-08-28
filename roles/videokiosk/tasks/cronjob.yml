@@ -1,0 +1,10 @@
+---
+    - name: scheduling cronjob
+      cron:
+        name: 59 minute schedule
+        minute: "*/59"
+        hour: "*"
+        day: "*"
+        weekday: "*"
+        month: "*"
+        job: "/home/pi/my-script.sh"

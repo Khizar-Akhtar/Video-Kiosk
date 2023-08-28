@@ -1,0 +1,7 @@
+---
+  - name: Setting up CTQ
+    hosts: pi
+    become: yes
+    roles:
+    - {role: 'videokiosk', tags: 'videokiosk'}
+      

@@ -1,0 +1,21 @@
+---
+     - name: Creating my-script
+       copy:
+           dest: /home/pi/my-script.sh
+           content: |
+            if diff -qr /home/pi/azure /home/pi/video;
+            then
+            echo "gleich file"
+
+            else
+            sudo rm /home/pi/video/*
+            sleep 11
+            sudo cp -a /home/pi/azure/* /home/pi/video
+            echo "andere file"
+
+            fi
+     - name: making my-script execuatable
+       file:
+         dest: /home/pi/my-script.sh
+         mode: a+x
+

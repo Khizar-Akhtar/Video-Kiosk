@@ -1,0 +1,9 @@
+---
+    - name: installing apt packages
+      become: yes
+      apt:
+        name:
+          - git
+          - cifs-utils
+          - xrdp
+        update_cache: yes
